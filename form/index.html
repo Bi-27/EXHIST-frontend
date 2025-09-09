@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        /* research */
+    }
+    body{
+        width:100%;
+        height:100vh;
+        display:flex;
+        /* joins everything on the top x-axis */
+        justify-content: center;
+        /* arranges content at the center on the x-axis */
+        align-items: center;
+        /* arranges content at the center on the y-axis */
+    }
+    form{
+        width:400px;
+        display: flex;
+        box-shadow: 0 4px 24px rgba(red, green, blue, alpha);
+        padding: 30px 20px;
+        /* the first part is top and right i.e 30px and the second is left and right */
+        justify-content: center;
+        flex-direction: column;
+        gap:10px;
+        border-radius: 20px;
+        border: 2px solid;
+    }
+    legend{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    label{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    input{
+        padding:8px 12px;
+        border-radius: 20px;
+        outline:none;
+    }
+    input[type="email"],
+    input[type="password"]{
+        border: 1px solid skyblue;
+    }
+    input[type="submit"]{
+        border: none;
+        background-color: rgb(120, 99, 215);
+        transition: 2s;
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(146, 158, 236);
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+    }
+    p a{
+        text-decoration: none;
+        margin-left:5px;
+    }
+    p a:hover{
+        text-decoration: underline;
+    }
+
+
+</style>
+<body>
+    <form>
+        <!-- this one creates a form -->
+        <legend>Login</legend>
+        <!-- this one gives the title of the form -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <!-- the type:gives info about the input,the id:relates the input to the label -->
+         <label for="password">Password</label>
+         <input type="password" name="password" id="password" required>
+         <!-- the "required" part makes sure that the user feels in the info can be placed anywhere -->
+          <input type="submit" value="Login">
+          <hr>
+          <p>Don't have an account?<a href="#">Sign-up</a></p>
+    </form>
+</body>
+</html>
